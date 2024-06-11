@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="h1" class="text-center display-2 alert alert-info" style="font-family: italic;">Pakistan</h1>
+        <p id="f1" class="text-center display-4">Pakistan is going to won the match</p>
+        <button class="btn btn-danger" onclick="fun1()">Announce Winner</button>
+    </div>
+</body>
+</html>
+<script>
+    function fun1()
+    {
+       var h1Ele=document.getElementById("h1");
+       h1Ele.innerHTML="India";
+       var f1Ele=document.getElementById("f1");
+       f1Ele.innerHTML="India won the match by 6 runs";
+    }
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        input{
+            width: 77px;
+            height: 70px;
+            margin-top: 5px;
+            background-color: cadetblue;
+            font-size: 20px;
+            color: aliceblue;
+        }
+        button {
+            margin: auto;
+            width: 77px;
+            height: 70px;
+            margin-top: 5px;
+            background-color: cadetblue;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- print the calculator -->
+     <h1 class="alert alert-info text-center">Calculator</h1>
+     <div class="container col-sm-3 mt-5">
+        <input class="form-control bg-secondary text-white display-1" type="text" id="txt1" value="">
+     </div>
+     <div class="container col-sm-3 mt-4">
+        <button class="btn btn-dark" onclick="fun1(this)">%</button>
+        <button class="btn btn-dark" onclick="fun1(this)">CE</button>
+        <button class="btn btn-dark" onclick="fun1(this)">C</button>
+        <button class="btn btn-dark" onclick="fun1(this)">del</button>    
+     </div>
+     <div class="container col-sm-3 mt-1" >
+        <button class="btn btn-dark" onclick="fun1(this)">1</button>
+        <button class="btn btn-dark" onclick="fun1(this)">2</button>
+        <button class="btn btn-dark" onclick="fun1(this)">3</button>
+        <button class="btn btn-dark" onclick="fun1(this)">+</button>    
+     </div>
+     <div class="container col-sm-3">
+        <button class="btn btn-dark" onclick="fun1(this)">4</button>
+        <button class="btn btn-dark" onclick="fun1(this)">5</button>
+        <button class="btn btn-dark" onclick="fun1(this)">6</button>
+        <button class="btn btn-dark" onclick="fun1(this)">-</button>
+     </div>
+     <div class="container col-sm-3">
+        <button class="btn btn-dark" onclick="fun1(this)">7</button>
+        <button class="btn btn-dark" onclick="fun1(this)">8</button>
+        <button class="btn btn-dark" onclick="fun1(this)">9</button>
+        <button class="btn btn-dark" onclick="fun1(this)">*</button>
+     </div>
+     <div class="container col-sm-3">
+        <button class="btn btn-dark" onclick="fun1(this)">0</button>
+        <button class="btn btn-dark" onclick="fun1(this)">.</button>
+        <button class="btn btn-dark" onclick="fun1(this)">/</button>
+        <button class="btn btn-dark" onclick="fun1(this)">=</button>
+     </div>
+
+         
+</body>
+</html>
+<script>
+    function fun1(btn) 
+    {
+      let txtbox=document.getElementById("txt1");
+      let oldval=txtbox.value;
+      let newval=btn.innerHTML;
+      if(newval=="=")
+      {
+         txtbox.value=eval(oldval);
+      }
+      else if(newval=="CE")
+      {
+         txtbox.value="";
+      }
+      else if(newval=="del")
+      {
+         txtbox.value=oldval.slice(0,oldval.length-1);
+      }
+      else if(newval=="C")
+      {
+         txtbox.value="";
+      }
+      else
+      {
+         txtbox.value=oldval+newval;
+      }
+    }
+</script>

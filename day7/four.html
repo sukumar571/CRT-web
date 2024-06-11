@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <p class="h3 bg-secondary text-white alert text-center">Example on JavaScript</p>
+    </div>
+    <div class="container col-sm-6">
+        <div class="row">
+            <div>
+                <img  class="img img-thumbnail" id="img" src="images/2.jpg" alt="">
+            </div>
+            <div class="col-sm-3 ">
+                <button class="btn btn-secondary mt-5 float-end" onclick="mb()">Click</button>
+            </div>
+        </div>
+    </div>
+    <script>
+      function mb() 
+        {
+            let img=document.getElementById("img");
+            let k=Math.floor(Math.random()*3);
+            img.src="images/"+k+".jpg";
+        }
+    </script>
+</body>
+</html>

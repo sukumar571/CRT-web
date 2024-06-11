@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="alert alert-info text-center">Another Example</h1>
+        </div>
+        <div class="container">
+        <span id="cnt"></span>
+        <div class="row">
+            <div class="col-sm-4">
+                <textarea onkeyup="fun1()" name="ta" id="ta" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function fun1()
+    {
+        var taEle=document.getElementById("ta");
+        let msg=(taEle.value);
+        document.getElementById("cnt").innerHTML=msg.length;
+    }
+</script>

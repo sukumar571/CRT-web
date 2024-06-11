@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1 class="alert alert-info text-center">Concat Example</h1>
+    <div class="container">
+        <form action="#">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control bg-secondary text-white" id="fname">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control bg-secondary text-white" id="lname">
+            </div>
+            <div class="text-center">
+                <button onclick="fun1()" type="concat" class="btn btn-dark mt-4">CONCAT</button>
+            </div>
+        </form>
+        <p id="out" class="text-center display-4 mt-5" style="font-family:'Times New Roman', Times, serif;"></p>
+    </div>
+</body>
+</html>
+<script>
+    function fun1() {
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        document.getElementById("out").innerHTML=fname+" "+lname;
+    }
+</script>

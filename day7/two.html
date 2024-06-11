@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="images/img2.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="alert bg-secondary text-warning">Example on JavaScript</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <button onclick="document.getElementById('img1').src='images/two.gif' ">Turn on the light</button>
+            </div>
+            <div class="col-sm-4">
+                <img id="img1" src="images/one.gif" alt="">
+            </div>
+            <div class="col-sm-4">
+                <button onclick="document.getElementById('img1').src='images/one.gif'">Turn off the light</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

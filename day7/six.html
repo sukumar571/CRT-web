@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="images/img7.jpg" type="image/x-icon">
+</head> 
+<body>
+    <div class="container-fluid">
+        <p class="h1 alert bg-info text-center">Array Example</p>
+    </div>
+    <div class="container w-50">
+        <img id="img1" src="images/2.jpg" class="img img-thumbnail" alt="">
+    </div>
+</body>
+</html>
+<script>
+    var arr = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '0.jpg', 'img1.jpg', 'img7.jpg', 'img.jpeg', 'img7.webp', 'one.gif'];
+    function fun1() 
+    {
+        let i=Math.floor(Math.random() *arr.length);
+        document.getElementById('img1').src="images/"+arr[i];
+        console.log(arr.length);
+    }
+    setInterval(fun1, 1000);
+</script>
