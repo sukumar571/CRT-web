@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="images/" type="image/x-icon">
+
+</head>
+<body>
+    <h1 class="alert alert-info text-center">Small Example</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="mt-3">
+                    <input class="form-control border border-2 border-black" id="ta" type="text">
+                </div>
+                <div class="mt-3">
+                    <input class="form-control border border-2 border-black" id="tb" type="text">
+                </div>
+                <div class="mt-3">
+                    <input class="form-control border border-2 border-black" id="tc" type="text">
+                </div>
+                <div class="mt-3 ">
+                    <button onclick="fun1(this)" class="btn btn-danger">Add</button>
+                    <button onclick="fun1(this)" class="btn btn-success">Sub</button>
+                    <button onclick="fun1(this)" class="btn btn-secondary">Mul</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function fun1(btn)
+    {
+
+        var a=document.getElementById("ta").value;
+        var b=document.getElementById("tb").value;
+        let c=0;
+        if(btn.innerHTML=="Add")
+        {
+            c=parseInt(a)+parseInt(b);
+        }
+        else if(btn.innerHTML=="Sub")
+        {
+            c=parseInt(a)-parseInt(b);
+        }
+        else if(btn.innerHTML=="Mul")
+        {
+            c=parseInt(a)*parseInt(b);
+        }
+        document.getElementById("tc").value=c;
+    }
+
+</script>
